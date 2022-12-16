@@ -2,7 +2,7 @@ const frontPageFeatured = document.querySelector(".front-page-featured");
 
 
 
-
+//För menu meals
 /* function menuCardGenerator(db) {
     //console.log(db);
     
@@ -34,7 +34,7 @@ const frontPageFeatured = document.querySelector(".front-page-featured");
 menuCardGenerator(db); */
 
 
-
+//För feature meal
 function cardFeatureGenerator(db) {
     
     console.log(db.bbqs[0].name)
@@ -62,36 +62,3 @@ function cardFeatureGenerator(db) {
 cardFeatureGenerator(db);
 
 //console.log(db.bbqs[0].name);
-
-
-
-
-
-
-
-
-/* function createCard(theme) {
-    // CREATES A TEMPLATE FOR EACH CARD
-    let card = document.createElement('figure')
-    card.innerHTML = `<img class ="card-img" src="${theme.name}" alt="${theme.alt}" width = "100">`
-    card.className = 'card'
-    card.addEventListener('click', () => {
-      // MAKES THE CARDS CLICKABLE WITH AN ANTI SPAM
-      if (!card.classList.contains('flip-front') && !preventClick) {
-        gameLogic(card, theme)
-      }
-    })
-  
-    return card
-  }
-  function createDOMCard(container) {
-    // CREATES EACH CARDS WITH A IMG FROM THEME-OBJECT AND USES CREATECARD FUNTCION AS A TAMPLATE. ADDING TO HTML.
-    let totalAmount = theme.length
-    for (let i = 0; i < totalAmount; i++) {
-      let random = Math.floor(Math.random() * theme.length)
-      let cards = createCard(theme[random])
-  
-      theme.splice(random, 1)
-      container.append(cards)
-    }
-  } */
