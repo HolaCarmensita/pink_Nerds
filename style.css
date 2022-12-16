@@ -12,3 +12,13 @@ body {
 .front-page-container {
     text-align: center;
 }
+
+.flag-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flags {
+    width: 75px;
+    height: 75px;
+}

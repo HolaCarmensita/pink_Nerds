@@ -9,25 +9,34 @@
     <link rel="stylesheet" href="style.css" />
 
     <script src="app.js" defer></script>
+    <script src="language.js" defer></script>
   </head>
   <body>
+
+    <div class="flag-container">
+      <img class="flags" src="assets/SWE.png" alt="svenska flaggan"onclick="changeLanguage('swe')">
+      <img class="flags" src="assets/UK.png" alt="british flag" onclick="changeLanguage('eng')">
+    </div>
+
     <div class="front-page-container">
       <div class="front-page-language"></div>
 
+
+
       <div class="front-page-logo">
-        <h1 class="front-page-header">The Kraken Inn</h1>
+        <h1 class="front-page-header" id="welcomePhrase">Välkommen till The Kraken inn</h1>
         <img src="" alt="" />
       </div>
 
       <div class="front-page-btns">
-        <button class="front-page-btn">Meny</button>
+        <button class="front-page-btn" id="menu">Meny</button>
       </div>
 
-      <h2 class="front-page-featured-header">Dagen Specialerbjudande</h2>
+      <h2 class="front-page-featured-header" id="specialOrder">Dagens Specialerbjudande</h2>
 
       <div class="front-page-featured"></div>
 
-      <button class="order-button">Min beställning</button>
+      <button class="order-button" id="orderButton">Min beställning</button>
     </div>
   </body>
 </html>
