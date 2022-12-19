@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-saldo{
+
+}
+h1{
+    /* display: inline; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+.box-saldo{
+    display: flex;
+    border: 1px solid #000;
+    padding: 20px;
+    width: 40%;
+    padding: 2em 0;
+    
+    margin: 0 auto;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+.cart-saldo{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000;
+    flex-direction: column;
+    width: 60%;
+    padding: 2em 0;
+    margin: 0 auto;
+    gap: 1em;
+
+}
+.select-class{
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px 14px;
+    margin-bottom: 10px;
+}
+.btn-saldo{
+    background-color: rgb(43, 43, 250);
+    color: white;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-radius: 4px;
+}
