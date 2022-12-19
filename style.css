@@ -42,6 +42,13 @@ body {
     text-align: center;
 }
 
+/*Behövs för att Casandras sökfunktion ska funka att testa*/
+/* img {
+    width: 20%;
+} */
+
+.hidden {
+   display: none;
 
 .flag-container {
     display: flex;
@@ -92,5 +99,4 @@ body {
 
 .featureCardImage {
     border-radius: 50%;
-
 }
