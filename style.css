@@ -53,17 +53,22 @@ body {
 .card-body {
     width: 100px;
     height: 100px;
-    background-color: #c9c9c9;
+
 
     padding: 2em;
+}
+.card-body {
+    background-color: #c9c9c9;
 }
 
 .card-body p {
     color: black;
+    
 }
+
 .cardImage{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
 
 .featureCard-body {
