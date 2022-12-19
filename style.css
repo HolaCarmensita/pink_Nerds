@@ -42,6 +42,16 @@ body {
     text-align: center;
 }
 
+
+.flag-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flags {
+    width: 75px;
+    height: 75px;
+
 .menu-container,
 .front-page-featured {
     display: flex;
@@ -81,4 +91,5 @@ body {
 
 .featureCardImage {
     border-radius: 50%;
+
 }
