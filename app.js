@@ -15,7 +15,7 @@ function cardFeatureGenerator(db) {
     let cardImage = document.createElement('img');
 
     
-    cardImage.src = db.bbqs[random].img;
+    cardImage.src = db.breads[random].img;
     cardFoodName.textContent = db.bbqs[random].dsc;
     cardPrice.textContent = db.bbqs[random].price + "sek";
 

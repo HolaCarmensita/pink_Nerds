@@ -38,7 +38,7 @@ menuCardGenerator(db); */
 function menuCardGenerator(db) {
     
 
-    let random = Math.floor(Math.random() * db.bbqs.length);
+    let random = Math.floor(Math.random() * db.length);
     
     let card = document.createElement('div');
 
@@ -46,11 +46,11 @@ function menuCardGenerator(db) {
     let cardPrice = document.createElement('p');
     let cardImage = document.createElement('img');
 
+    cardImage.src = db[random].img;
+    cardImage.alt = db[random].name;
+    cardFoodName.textContent = db[random].dsc;
+    cardPrice.textContent = db[random].price;
     
-    cardImage.src = db.bbqs[random].img;
-    cardFoodName.textContent = db.bbqs[random].dsc;
-    cardPrice.textContent = db.bbqs[random].price;
-
     card.classList.add('card-body');
     cardImage.classList.add('cardImage');
         
@@ -59,15 +59,30 @@ function menuCardGenerator(db) {
 
 }
 
-for (let i = 0; i < 10; i++) {
-    menuCardGenerator(db);
-}
-
-
+let items = [db.bbqs, ...db.burgers,
+    ...db.pizzas, ...db.porks, ...db.sandwiches,];
 
 
 /*
-Frågor:
-Hur får vi menyn att visa alla rätter istället för 1 kategori?
-Hur tar vi bort duplicerade kort?
+    "bbqs": 59,
+    "best-foods": 60,
+    "breads": 58,
+    "burgers": 60,
+    "chocolates": 59,
+    "desserts": 43,
+    "drinks": 48,
+    "fried-chicken": 58,
+    "ice-cream": 27,
+    "pizzas": 54,
+    "porks": 60,
+    "sandwiches": 55,
+    "sausages": 60,
+    "steaks": 57,
+    "our-foods": 697
 */
+
+for (let i = 0; i < 10; i++) {
+    menuCardGenerator(items);
+}
+
+
