@@ -5,30 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Kraken Inn</title>
-    <link rel="stylesheet" href="style.css"/>
-    <script type="text/javascript" src="db.js" defer></script>
-    <script type="text/javascript" src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <script src="db.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="language.js" defer></script>
   </head>
   <body>
+
+    <div class="flag-container">
+      <img id="flags" class="flags" src="assets/SWE.png" alt="svenska flaggan"onclick="changeLanguage('swe')">
+      <img id="flags" class="flags" src="assets/UK.png" alt="british flag" onclick="changeLanguage('eng')">
+    </div>
+
     <div class="front-page-container">
       <div class="front-page-language"></div>
 
+
+
+
       <div class="front-page-logo">
-        <h1 class="front-page-header">The Kraken Inn</h1>
+        <h1 class="front-page-header" id="welcomePhrase">Välkommen till The Kraken inn</h1>
         <img src="" alt="" />
+        <p>Hej och välkomna till The Kraken Inn!</p>
+        <p>Här under så har ni våran Meny samt Specialerbjudanden!</p>
       </div>
 
       <div class="front-page-btns">
-        <button class="front-page-btn" onclick="location.href='menu.html'">
-          Meny
-        </button>
-      </div>
+        <a id="menuLink" href="menu.html"><button href="" class="front-page-btn" id="menuButton">Meny</button></a>
+        <a id="saldoLink" href="saldo.html"><button href="" class="front-page-btn" id="saldoButton">Saldo</button></a>
 
-      <h2 class="front-page-featured-header">Dagen Specialerbjudande</h2>
+        
+      <h2 class="front-page-featured-header" id="specialOrder">Dagens Specialerbjudande</h2>
 
       <div class="front-page-featured"></div>
 
-      <button class="order-button">Min beställning</button>
     </div>
   </body>
 </html>

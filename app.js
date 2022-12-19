@@ -71,7 +71,7 @@
 // };
 // createCards ();
 
-// ================ OVAN SKAPADE JAG KORT FÖR ATT SE VISUELLT HUR SÖKFUNKTIONEN FUNKADE ============
+// ================ OVAN SKAPADE JAG KORT FÖR ATT SE VISUELLT HUR SÖKFUNKTIONEN FUNKADE, avmarkera för att testa. glöm ej att även avmarkera .img i css ============
 function searchElements () {
     let cards = document.querySelectorAll('.card')
     let searchInput = document.getElementById('search').value;
@@ -87,32 +87,36 @@ function searchElements () {
       }
 };
 
-// ================= HÄR BÖRJADE JAG FILTRERA MED HJÄLP AV KNAPPAR ENLIGT TRELLO MEN VALDE EN input-sökfunktion LIKT VÅR WIREFRAME ======================
-// filterButtons.forEach(button => {
-//     button.addEventListener('click', filterElements)
-// });
 
-// function filterElements (e) {
 
-//     let targetId = e.target.id.toLowerCase();
-//     let constArray = db[targetId];
+const frontPageFeatured = document.querySelector(".front-page-featured");
+
+
+//För feature meal
+function cardFeatureGenerator(db) {
+
+    let random = Math.floor(Math.random() * db.bbqs.length);
+    
+    let card = document.createElement('div');
+
+    let cardFoodName = document.createElement('p');
+    let cardPrice = document.createElement('p');
+    let cardImage = document.createElement('img');
 
     
-//     constArray.forEach(function (dish) {
-//         let box = document.createElement('div');
-//         const nodeThing = document.createTextNode(dish.name);
-//         box.appendChild(nodeThing);
-//         cardBoard.appendChild(box);
-//         console.log(box);
-//     });
+    cardImage.src = db.breads[random].img;
+    cardFoodName.textContent = db.bbqs[random].dsc;
+    cardPrice.textContent = db.bbqs[random].price + "sek";
 
-// };
+    card.classList.add('featureCard-body');
+    cardImage.classList.add('featureCardImage');
+        
+    card.append(cardImage, cardFoodName, cardPrice);
+    frontPageFeatured.append(card);
 
-
-
-
+}
 
 
+cardFeatureGenerator(db);
 
-
-
+//console.log(db.bbqs[0].name);
