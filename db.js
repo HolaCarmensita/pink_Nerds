@@ -1,5 +1,6 @@
 /* DISCLAIMER: all rights reserved to creator of github repository https://github.com/igdev116/free-food-menus-api under ISC per package declaration */
 
+
 const db = {
   "bbqs": [
     {
