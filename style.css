@@ -12,3 +12,11 @@ body {
 .front-page-container {
     text-align: center;
 }
+
+/* img {
+    width: 20%;
+} */
+
+.hidden {
+   display: none;
+}

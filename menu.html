@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Kraken Inn</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="db.js" defer></script>
+    <script type="text/javascript" src="app.js" defer></script>
   </head>
   <body>
     <div class="menu-page-container">
       <nav class="menu-page-nav">
-        <button href="" class="nav-btn"></button>
-        <button href="" class="nav-btn"></button>
-        <button href="" class="nav-btn"></button>
+        <button href="" class="filter-buttons" id="burgers">Burgers</button>
+        <button href="" class="filter-buttons" id ="drinks">Drinks</button>
+        <button href="" class="filter-buttons" id = "pizzas">Pizzas</button>
+        <button href="" class="filter-buttons" id = "best-foods">Featured</button>
       </nav>
 
-      <input placeholder="Sök" type="text" />
+      <input placeholder="Sök" type="text" id="search" oninput="searchElements()"/>
 
       <div class="menu-container"></div>
 
