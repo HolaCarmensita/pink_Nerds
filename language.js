@@ -12,7 +12,6 @@
         if (window.location.hash == "#eng") {
             welcomePhrase.textContent = "Welcome to The Kraken Inn";
             specialOrder.textContent = "Todays special order";
-            orderButton.textContent = "My order";
             menuLink.href = "menu.html#eng";
             menuButton.textContent = "Menu";
             saldoLink.href = "saldo.html#eng";
