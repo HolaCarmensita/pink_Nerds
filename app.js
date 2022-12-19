@@ -1,9 +1,10 @@
 const frontPageFeatured = document.querySelector(".front-page-featured");
+const menuContainer = document.querySelector(".menu-container");
 
 
 
 //För menu meals
-/* function menuCardGenerator(db) {
+function menuCardGenerator(db) {
     //console.log(db);
     
     for (let category in db) {
@@ -25,14 +26,13 @@ const frontPageFeatured = document.querySelector(".front-page-featured");
         cardImage.classList.add('cardImage');
         
         card.append(cardImage, cardFoodName, cardPrice);
-        frontPageFeatured.append(card);
+        menuContainer.append(card);
 
         }
     }
 }
 
-menuCardGenerator(db); */
-
+menuCardGenerator(db);
 
 //För feature meal
 function cardFeatureGenerator(db) {
