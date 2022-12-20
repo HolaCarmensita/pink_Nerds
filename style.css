@@ -80,7 +80,6 @@ body {
 }
 
 .nav-main{
-
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -89,7 +88,7 @@ body {
     margin-bottom: 1.8em;
 }
 .nav-main-links{
-    color: #000;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     list-style: none;
     font-size: 23px;
@@ -98,15 +97,16 @@ body {
     font-weight: 400;
 }
 .active{
-    color: rgb(22, 22, 207);
-    border-bottom: 2px solid rgb(59, 59, 255);
-    
+    color: rgb(0, 0, 0);
+    background-color: aliceblue;
+    padding: 3px;
+    border-radius: 5px;
 }
 
-.nav-main-links:active{
+/* .nav-main-links:active{
     border-bottom: 3px solid rgb(59, 59, 255);;
     color: rgb(59, 59, 255);
-}
+} */
 
 /*Behövs för att Casandras sökfunktion ska funka att testa*/
 /* img {
