@@ -72,16 +72,18 @@ body {
 .nav-main-links:active{
     border-bottom: 3px solid rgb(59, 59, 255);;
     color: rgb(59, 59, 255);
-
+}
 
 /*Behövs för att Casandras sökfunktion ska funka att testa*/
 /* img {
     width: 20%;
 } */
 
+/* Tillhör search */
 .hidden {
    display: none;
 }
+
 .flag-container {
     display: flex;
     justify-content: space-around;
@@ -131,3 +133,4 @@ body {
 
 .featureCardImage {
     border-radius: 50%;
+}
