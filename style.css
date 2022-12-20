@@ -42,6 +42,38 @@ body {
     text-align: center;
 }
 
+.nav-main{
+
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1.8em;
+}
+.nav-main-links{
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+    font-size: 23px;
+    font-style: bold;
+    font-family: 'Source Serif Pro';
+    font-weight: 400;
+    
+    
+    
+}
+.active{
+    color: rgb(22, 22, 207);
+    border-bottom: 2px solid rgb(59, 59, 255);
+    
+}
+
+.nav-main-links:active{
+    border-bottom: 3px solid rgb(59, 59, 255);;
+    color: rgb(59, 59, 255);
+
+
 /*Behövs för att Casandras sökfunktion ska funka att testa*/
 /* img {
     width: 20%;
@@ -99,4 +131,3 @@ body {
 
 .featureCardImage {
     border-radius: 50%;
-}
