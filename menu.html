@@ -16,26 +16,29 @@
   </head>
   <body>
     <div class="menu-page-container">
-<!--SÖKFUNKTION och KORTMALL, obs div "dish-container" används i css och js-->
-        <div class="menu-container">
-          <input placeholder="Sök" type="text" id="search" oninput="searchElements()"/>
+      <!--SÖKFUNKTION och KORTMALL, obs div "dish-container" används i css och js-->
+      <div class="menu-container">
+        <input
+          placeholder="Sök"
+          type="text"
+          id="search"
+          oninput="searchElements()"
+        />
 
-          <div class="dish-container"></div>
+        <div class="dish-container"></div>
 
-          <template template>
-            <div class = "dish-card">
-              <img class="dish-img"> 
-              <div class="dish-name"></div>
-              <div class="dish-dsc"></div>
-              <div class="dish-price"></div>
-            </div>
-          </template>
+        <template template>
+          <div class="dish-card">
+            <img class="dish-img" />
+            <div class="dish-name"></div>
+            <div class="dish-dsc"></div>
+            <div class="dish-price"></div>
+          </div>
+        </template>
       </div>
-<!--CASANDrAS KOD-->
+      <!--CASANDrAS KOD-->
 
       <button class="order-button" id="orderButton">Min Beställning</button>
-
-      <button class="order-button">min beställning</button>
 
       <nav class="nav-main">
         <a id="startLink" href="index.html" class="nav-main-links">Start</a>
