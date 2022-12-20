@@ -4,22 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>The Kraken Inn - Saldo</title>
-
+  
+    <link rel="stylesheet" href="saldo.css">
     <link rel="stylesheet" href="style.css" />
-
+  
     <script src="app.js" defer></script>
     <script src="saldolanguage.js" defer></script>
 </head>
 <body>
+    <div class="container-saldo">
+        <h1>Min plånbok</h1>
+
+        <div class="parent-box">
+            <div class="box-saldo">
+                <h2>Ditt saldo: <span class="saldo-value"></span></h2>
+            </div>
+
+            
+            <div class="cart-saldo">
+                <!-- <label for=""></label> -->
+                <select name="" id="" class="select-class">
+                    <option value="">100kr</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>   
+                <button class="btn-saldo">Ladda saldo</button>
+            </div>
+    </div>
+    
     <div class="menu-page-container">
-        <nav class="menu-page-nav">
-          <button href="" class="nav-btn"></button>
-          <button href="" class="nav-btn"></button>
-          <button href="" class="nav-btn"></button>
-        </nav>
-  
-        <input id="placeholderText" placeholder="Lägg till ditt saldo" type="text" />
   
         <div class="menu-container"></div>
   
@@ -29,7 +44,8 @@
           <a id="startLink" href="index.html"><button href="" class="front-page-btn" id="startButton">Start</button></a>
           <a id="menuLink" href="menu.html"><button href="" class="front-page-btn" id="menuButton">Meny</button></a>
         </div>
-  
-      </div>
+
+    </div>
+
 </body>
 </html>
