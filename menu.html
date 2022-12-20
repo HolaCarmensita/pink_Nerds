@@ -12,24 +12,26 @@
     <script src="jsFiles/menulanguage.js" defer></script>
     <script src="jsFiles/db.js" defer></script>
     <script src="jsFiles/menu.js" defer></script>
+    <script src="jsFiles/dishcards.js" defer></script>
   </head>
   <body>
     <div class="menu-page-container">
-      <nav class="menu-page-nav">
-        <button href="" class="filter-buttons" id="burgers">Burgers</button>
-        <button href="" class="filter-buttons" id="drinks">Drinks</button>
-        <button href="" class="filter-buttons" id="pizzas">Pizzas</button>
-        <button href="" class="filter-buttons" id="best-foods">Featured</button>
-      </nav>
+<!--SÖKFUNKTION och KORTMALL, obs div "dish-container" används i css och js-->
+        <div class="menu-container">
+          <input placeholder="Sök" type="text" id="search" oninput="searchElements()"/>
 
-      <input
-        placeholder="Sök"
-        type="text"
-        id="search"
-        oninput="searchElements()"
-      />
+          <div class="dish-container"></div>
 
-      <div class="menu-container"></div>
+          <template template>
+            <div class = "dish-card">
+              <img class="dish-img"> 
+              <div class="dish-name"></div>
+              <div class="dish-dsc"></div>
+              <div class="dish-price"></div>
+            </div>
+          </template>
+      </div>
+<!--CASANDrAS KOD-->
 
       <button class="order-button" id="orderButton">Min Beställning</button>
 
