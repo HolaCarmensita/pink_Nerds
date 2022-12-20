@@ -1,5 +1,3 @@
-const menuContainer = document.querySelector(".menu-container");
-
 let randomArray = [];
 
 //För menu meals
@@ -9,7 +7,7 @@ let randomArray = [];
     for (let category in db) {
         //console.log(randomArray.slice(0, 12));
 
-        for (let dish of db[category]) {
+        for (let dish of db[category]) { 
             
         let card = document.createElement('div');
 
@@ -18,7 +16,7 @@ let randomArray = [];
         let cardPrice = document.createElement('p');
 
         cardImage.src = dish.img;
-        cardFoodName.textContent = dish.name;
+        cardFoodName.textContent = dish.dsc;
         cardPrice.textContent = dish.price;
 
         card.classList.add('card-body');
@@ -34,10 +32,8 @@ let randomArray = [];
 
 menuCardGenerator(db); */
 
-
-function menuCardGenerator(db) {
+/* function menuCardGenerator(db) {
     
-
     let random = Math.floor(Math.random() * db.length);
     
     let card = document.createElement('div');
@@ -56,11 +52,11 @@ function menuCardGenerator(db) {
         
     card.append(cardImage, cardFoodName, cardPrice);
     menuContainer.append(card);
-
 }
 
-let items = [db.bbqs, ...db.burgers,
-    ...db.pizzas, ...db.porks, ...db.sandwiches,];
+
+let items = [...db.bbqs, ...db.burgers,
+    ...db.pizzas, ...db.porks, ...db.sandwiches,]; */
 
 
 /*
@@ -81,8 +77,6 @@ let items = [db.bbqs, ...db.burgers,
     "our-foods": 697
 */
 
-for (let i = 0; i < 10; i++) {
+/* for (let i = 0; i < 10; i++) {
     menuCardGenerator(items);
-}
-
-
+} */
