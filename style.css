@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Source Serif Pro', serif;
-    line-height: 1.5em;
+    line-height: 1.3em;
     letter-spacing: 0.03em;
 
     color: white;
@@ -13,7 +13,7 @@ button {
 }
 
 body {
-    background: rgba(0,0,0,0.5) url(assets/HDbackgroundMap.jpg) center center/ cover;
+    background: rgba(0,0,0,0.5) url(assets/HDbackgroundMap.jpg) fixed center center/ cover;
     background-blend-mode: darken;
     width: 100%;
     height: 100vh;
@@ -25,8 +25,24 @@ body {
     align-items: center;
     
     padding: 1em;
+    margin-top: 0.5em;
+}
+
+.flag-container {
+    display: flex;
+    justify-content: space-around;
     margin-top: 2em;
-    
+}
+
+.flags {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px black;
+
+    cursor: pointer;
 }
 
 .front-page-header {
@@ -37,9 +53,30 @@ body {
     font-size: 1.2em;
 }
 
+.front-page-featured-header {
+    margin-top: 1.5em;
+}
+
 .menu-page-container,
 .front-page-container {
     text-align: center;
+}
+
+.featureCard-body {
+    display: flex;
+    flex-direction: column;
+
+    width: 250px;
+    height: 250px;
+}
+
+.featureCardImage {
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid black;
+    box-shadow: 2px 2px 10px black;
+
+    margin: 1em 0em 1em 0em;
 }
 
 .nav-main{
@@ -59,9 +96,6 @@ body {
     font-style: bold;
     font-family: 'Source Serif Pro';
     font-weight: 400;
-    
-    
-    
 }
 .active{
     color: rgb(22, 22, 207);
@@ -84,16 +118,6 @@ body {
    display: none;
 }
 
-.flag-container {
-    display: flex;
-    justify-content: space-around;
-}
-
-.flags {
-    width: 75px;
-    height: 75px;
-}
-
 .menu-container,
 .front-page-featured {
     display: flex;
@@ -105,17 +129,24 @@ body {
 .card-body {
     width: 100px;
     height: 100px;
+    padding: 5em;
+    margin: 0.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-
-    padding: 2em;
+    flex-direction: column;
 }
 .card-body {
-    background-color: #c9c9c9;
+    background-image: linear-gradient(to bottom, #717681, #5f5a64, #4b4045, #342929, #1c1510);
+    background:rgba(106, 93, 93, 0.4);
 }
+    
 
 .card-body p {
     color: black;
-    
+    font-size: 1.2em;
+    font-weight: 700;
 }
 
 .cardImage{
@@ -123,14 +154,3 @@ body {
     height: 100px;
 }
 
-.featureCard-body {
-    display: flex;
-    flex-direction: column;
-
-    width: 250px;
-    height: 250px;
-}
-
-.featureCardImage {
-    border-radius: 50%;
-}

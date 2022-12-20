@@ -8,40 +8,59 @@
     <title>The Kraken Inn - Menu</title>
 
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
-    <script src="menulanguage.js" defer></script>
-    <script src="db.js" defer></script>
-    <script src="menu.js" defer></script>
+    <script src="jsFiles/app.js" defer></script>
+    <script src="jsFiles/menulanguage.js" defer></script>
+    <script src="jsFiles/db.js" defer></script>
+    <script src="jsFiles/menu.js" defer></script>
   </head>
   <body>
     <div class="menu-page-container">
       <nav class="menu-page-nav">
         <button href="" class="filter-buttons" id="burgers">Burgers</button>
-        <button href="" class="filter-buttons" id ="drinks">Drinks</button>
-        <button href="" class="filter-buttons" id = "pizzas">Pizzas</button>
-        <button href="" class="filter-buttons" id = "best-foods">Featured</button>
+        <button href="" class="filter-buttons" id="drinks">Drinks</button>
+        <button href="" class="filter-buttons" id="pizzas">Pizzas</button>
+        <button href="" class="filter-buttons" id="best-foods">Featured</button>
       </nav>
-      
-      <input placeholder="Sök" type="text" id="search" oninput="searchElements()"/>
-      
-      <div class="menu-container"></div>
-      
-      <button class="order-button" id="orderButton">Min Beställning</button>
-      
-      <div class="front-page-btns">
-        <a id="startLink" href="index.html"><button href="" class="front-page-btn" id="startButton">Start</button></a>
-        <a id="saldoLink" href="saldo.html"><button href="" class="front-page-btn" id="saldoButton">Saldo</button></a>
-      </div>
 
+      <input
+        placeholder="Sök"
+        type="text"
+        id="search"
+        oninput="searchElements()"
+      />
+
+      <div class="menu-container"></div>
+
+      <button class="order-button" id="orderButton">Min Beställning</button>
+
+      <div class="front-page-btns">
+        <a id="startLink" href="index.html"
+          ><button href="" class="front-page-btn" id="startButton">
+            Start
+          </button></a
+        >
+        <a id="saldoLink" href="saldo.html"
+          ><button href="" class="front-page-btn" id="saldoButton">
+            Saldo
+          </button></a
+        >
+      </div>
 
       <button class="order-button">min beställning</button>
 
       <nav class="nav-main">
         <a href="index.html" class="nav-main-links">Start</a>
         <a href="saldo.html" class="nav-main-links">Plånbok</a>
-        <a href="menu.html" class="nav-main-links beställ" style="color: rgb(22, 22, 207); border-bottom:  2px solid rgb(59, 59, 255);">Beställ</a>
+        <a
+          href="menu.html"
+          class="nav-main-links beställ"
+          style="
+            color: rgb(22, 22, 207);
+            border-bottom: 2px solid rgb(59, 59, 255);
+          "
+          >Beställ</a
+        >
       </nav>
-
     </div>
   </body>
 </html>
