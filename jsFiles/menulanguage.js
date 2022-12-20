@@ -11,9 +11,11 @@
         // Sätt sidans innehåll baserat på hash-värdet
         if (window.location.hash == "#eng") {
             orderButton.textContent = "My order";
-            placeholderText.placeholder = "Search";
-            startLink.href = "index.html#eng";
+            search.placeholder = "Search";
+            startLink.href = "index.html#eng"
+            menuLink.href = "menu.html#eng";
+            menuLink.textContent = "Menu";
             saldoLink.href = "saldo.html#eng";
-            saldoButton.textContent = "Balance";
+            saldoLink.textContent = "Balance";
         }
       }

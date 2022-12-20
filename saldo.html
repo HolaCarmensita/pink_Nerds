@@ -30,7 +30,7 @@
                     <option value="">500kr</option>
                     <option value="">1000kr</option>
                 </select>   
-                <button class="btn-saldo">Ladda saldo</button>
+                <button id="balanceButton" class="btn-saldo">Ladda saldo</button>
             </div>
     </div>
     
@@ -39,18 +39,13 @@
         <div class="menu-container"></div>
   
         <button class="order-button" id="orderButton">Min Beställning</button>
-  
-        <div class="front-page-btns">
-          <a id="startLink" href="index.html"><button href="" class="front-page-btn" id="startButton">Start</button></a>
-          <a id="menuLink" href="menu.html"><button href="" class="front-page-btn" id="menuButton">Meny</button></a>
-        </div>
 
     </div>
 
     <nav class="nav-main">
-        <a href="index.html" class="nav-main-links active">Start</a>
-        <a href="saldo.html" class="nav-main-links">Plånbok</a>
-        <a href="menu.html" class="nav-main-links beställ">Beställ</a>
+        <a id="startLink" href="index.html" class="nav-main-links">Start</a>
+        <a id="menuLink" href="menu.html" class="nav-main-links">Meny</a>
+        <a id="saldoLink" href="saldo.html" class="nav-main-links active">Saldo</a>
       </nav>
 
 </body>
