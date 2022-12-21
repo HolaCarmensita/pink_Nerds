@@ -185,7 +185,7 @@ cartItemP.textContent = event.currentTarget.textContent;
 cartItemBtn.textContent = "Remove";
 
 
-cartItem.append(cartItemImg, cartItemP, cgitartItemBtn);
+cartItem.append(cartItemImg, cartItemP, cartItemBtn);
 shoppingCart.append(cartItem);
 
 
@@ -198,10 +198,8 @@ shoppingCart.append(cartItem);
 
 
 
-const removeItemBtn = document.querySelector(".remove-cart-item");
+/* const removeItemBtn = document.querySelector(".remove-cart-item");
 
 removeItemBtn.addEventListener('click', removeItem);
 
-function removeItem() {
-
-}
+function removeItem() {} */
