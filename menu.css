@@ -1,0 +1,43 @@
+img {
+    width: 100px;
+}
+.menu-container {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.dish-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+}
+
+.dish-card {
+    background-color: white;
+    padding: .5rem;
+}
+
+.dish-card > .dish-name {
+    margin-bottom: .25rem; 
+}
+
+.dish-card > .dish-dsc {
+    font-size: .8rem;
+}
+
+/* vi vill ändra enehet via javascript https://medium.com/@speir.wang/how-to-change-pseudo-element-properties-with-javascript-eb37b9fd3157*/
+.dish-price::after {
+    content: "kr";
+}
+
+/*Tillhör sökfunktionen*/
+.hidden {
+    display: none;
+}
+
+#search {
+    padding: 0.5em;
+    font-size: 1em;
+}

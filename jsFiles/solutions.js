@@ -32,7 +32,7 @@ let randomArray = [];
 
 menuCardGenerator(db); */
 
-/* function menuCardGenerator(db) {
+function menuCardGenerator(db) {
     
     let random = Math.floor(Math.random() * db.length);
     
@@ -56,8 +56,9 @@ menuCardGenerator(db); */
 
 
 let items = [...db.bbqs, ...db.burgers,
-    ...db.pizzas, ...db.porks, ...db.sandwiches,]; */
+...db.pizzas, ...db.porks, ...db.sandwiches,];
 
+console.log(items)
 
 /*
     "bbqs": 59,
