@@ -105,7 +105,10 @@ body {
     margin-bottom: 1.8em;
     background-color: rgb(255, 255, 255);
 
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
     z-index: 4;
+
 }
 
 .nav-main-links{

@@ -7,7 +7,6 @@
 
         // Sätt sidans innehåll baserat på hash-värdet
         if (window.location.hash == "#eng") {
-            orderButton.textContent = "My order";
             search.placeholder = "Search";
             startLink.href = "index.html#eng"
             menuLink.href = "menu.html#eng";
