@@ -10,27 +10,22 @@
     <link rel="stylesheet" href="saldo.css">
     <link rel="stylesheet" href="style.css" />
   
-    <script src="jsFiles/app.js" defer></script>
+    <!-- <script src="jsFiles/app.js" defer></script> -->
     <script src="jsFiles/saldolanguage.js" defer></script>
 </head>
 <body>
     <div class="container-saldo">
-        <h1>Min plånbok</h1>
+        <h1 id="myBalance">Mitt saldo</h1>
 
         <div class="parent-box">
             <div class="box-saldo">
-                <h2>Ditt saldo: <span class="saldo-value"></span></h2>
+                <h2 id="yourBalance">Tillgänligt belopp:</h2>
             </div>
-
             
             <div class="cart-saldo">
-                <!-- <label for=""></label> -->
-                <select name="hey" id="" class="select-class">
-                    <option value="">100kr</option>
-                    <option value="">500kr</option>
-                    <option value="">1000kr</option>
-                </select>   
-                <button id="balanceButton" class="btn-saldo">Ladda saldo</button>
+                <label id="chooseAmount" for="item">Välj belopp att lägga till i saldo</label>
+                <input type="text" name="item" id="chosenAmount" placeholder="Önskat belopp">
+                <button id="bankID">Godkänn med Bank-ID</button>
             </div>
     </div>
     

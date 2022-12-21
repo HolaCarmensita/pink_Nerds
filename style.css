@@ -28,6 +28,11 @@ body {
     margin-top: 0.5em;
 }
 
+.front-page-logo h1,
+.front-page-logo p {
+    color: white;
+}
+
 .flag-container {
     display: flex;
     justify-content: space-around;
@@ -54,6 +59,7 @@ body {
 }
 
 .front-page-featured-header {
+    color: white;
     margin-top: 1.5em;
 }
 
@@ -64,32 +70,40 @@ body {
 
 .featureCard-body {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
 
-    width: 250px;
-    height: 250px;
+    margin-top: 3em;
+    width: 220px;
+    height: 220px;
+}
+
+.featureCard-body p {
+    color: white;
 }
 
 .featureCardImage {
+    width: 220px;
     border-radius: 50%;
     cursor: pointer;
     border: 1px solid black;
     box-shadow: 2px 2px 10px black;
 
-    margin: 1em 0em 1em 0em;
+    margin: 1.8em 0em 1em 0em;
 }
 
 .nav-main{
-
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     position: fixed;
     bottom: 0;
     margin-bottom: 1.8em;
+    background-color: rgb(255, 255, 255);
 }
 .nav-main-links{
-    color: #000;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     list-style: none;
     font-size: 23px;
@@ -98,14 +112,13 @@ body {
     font-weight: 400;
 }
 .active{
-    color: rgb(22, 22, 207);
-    border-bottom: 2px solid rgb(59, 59, 255);
+    color: rgb(255, 0, 0);
 }
 
-.nav-main-links:active{
+/* .nav-main-links:active{
     border-bottom: 3px solid rgb(59, 59, 255);;
     color: rgb(59, 59, 255);
-}
+} */
 
 .front-page-featured {
     display: flex;
@@ -148,11 +161,12 @@ body {
 img {
     width: 100px;
 }
+
 .menu-container {
-        margin: auto;
-        width: 80%;
-        /*border: 3px solid black;*/
-        padding: 10px;
+    margin: auto;
+    width: 80%;
+    /*border: 3px solid black;*/
+    padding: 10px;
 }
 
 .dish-container {
@@ -186,6 +200,4 @@ img {
 .hidden {
     display: none;
  }
-
 /* STYLE FÖR SEARCH OCH CARDS mvh Casandra ^*/
-

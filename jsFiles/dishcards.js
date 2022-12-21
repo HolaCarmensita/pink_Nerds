@@ -37,10 +37,12 @@ menuList.forEach((listObject, index ) => { // For each item in the list + using 
     const dishCard = template.content.cloneNode(true) //cloning the template into a varible
     dishCard.querySelector(".dish-card").setAttribute("id", menuList[index].name);
     dishCard.querySelector(".dish-name").innerText = menuList[index].name; //name from listObject to template
-    dishCard.querySelector(".dish-img").setAttribute("src", menuList[index].img); //img from listObject to template
+    const dishImg = dishCard.querySelector(".dish-img").setAttribute("src", menuList[index].img); //img from listObject to template
     dishCard.querySelector(".dish-dsc").innerText = menuList[index].dsc; //dsc from listObject to template
     dishCard.querySelector(".dish-price").innerText = menuList[index].price; //price from listObject to template
     dishContainer.appendChild(dishCard);
+
+    
 });
 
 //SEARCHFUNCTION THAT SEARCH FOR THE NAME OCH THE DISH AND THE dsc.
@@ -59,6 +61,7 @@ function searchElements () {
       }
 };
 
+
 // TESTAR JUST NU MED EVENTLISTNER CURRENT TARGET
 // let choosenDishes = [];
 
@@ -76,14 +79,5 @@ function searchElements () {
 
 
 //SPREAD OPERATIOR 
-const flatDbList = [...db.bbqs, ...db.burgers,
-    ...db.pizzas, ...db.porks, ...db.sandwiches,]
-
-
-
-
-
-
-
-
-
+//const flatDbList = [...db.bbqs, ...db.burgers,
+//    ...db.pizzas, ...db.porks, ...db.sandwiches,]
