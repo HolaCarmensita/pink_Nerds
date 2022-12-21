@@ -100,9 +100,10 @@ body {
     position: fixed;
     bottom: 0;
     margin-bottom: 1.8em;
+    background-color: rgb(255, 255, 255);
 }
 .nav-main-links{
-    color: #000;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     list-style: none;
     font-size: 23px;
@@ -111,14 +112,13 @@ body {
     font-weight: 400;
 }
 .active{
-    color: rgb(22, 22, 207);
-    border-bottom: 2px solid rgb(59, 59, 255);
+    color: rgb(255, 0, 0);
 }
 
-.nav-main-links:active{
+/* .nav-main-links:active{
     border-bottom: 3px solid rgb(59, 59, 255);;
     color: rgb(59, 59, 255);
-}
+} */
 
 .front-page-featured {
     display: flex;

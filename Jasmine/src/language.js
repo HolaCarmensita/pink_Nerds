@@ -7,12 +7,11 @@
 
         // Sätt sidans innehåll baserat på hash-värdet
         if (window.location.hash == "#eng") {
-            orderButton.textContent = "My order";
-            search.placeholder = "Search";
+            welcomePhrase.textContent = "Welcome to The Kraken Inn";
+            specialOrder.textContent = "Todays special order";
             startLink.href = "index.html#eng"
             menuLink.href = "menu.html#eng";
             menuLink.textContent = "Menu";
             saldoLink.href = "saldo.html#eng";
             saldoLink.textContent = "Balance";
         }
-
