@@ -148,7 +148,7 @@ cards.forEach(card => {
 function putInOrder(event) {
 let orderArray = [];
 
-let clickedCard = event.target.textContent;
+let clickedCard = event.currentTarget.name;
 
 
 orderArray.push(clickedCard);
