@@ -169,6 +169,8 @@ function putInOrder(event) {
 let orderArray = [];
 
 
+cartNumber.textContent++;
+
 
 let cartItem = document.createElement('div');
 let cartItemImg = document.createElement('img');
@@ -180,7 +182,7 @@ cartItemImg.classList.add("cart-item-img")
 cartItemP.classList.add("cart-item-p")
 cartItemBtn.classList.add("remove-cart-item")
 
-cartItemImg.textContent = event.currentTarget;
+cartItemImg.innerHTML = `<img src="${event.currentTarget}"`;
 cartItemP.textContent = event.currentTarget.textContent;
 cartItemBtn.textContent = "Remove";
 
