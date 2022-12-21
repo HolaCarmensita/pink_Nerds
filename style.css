@@ -86,9 +86,10 @@ body {
     position: fixed;
     bottom: 0;
     margin-bottom: 1.8em;
+    background-color: rgb(255, 255, 255);
 }
 .nav-main-links{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     list-style: none;
     font-size: 23px;
@@ -97,8 +98,8 @@ body {
     font-weight: 400;
 }
 .active{
-    color: rgb(0, 0, 0);
-    background-color: aliceblue;
+    color: rgb(255, 0, 0);
+    /* background-color: aliceblue; */
     padding: 3px;
     border-radius: 5px;
 }
