@@ -89,12 +89,13 @@ function searchElements () {
 // VARUKORG
 const shoppingCartBtn = document.querySelector(".shopping-cart-logo")
 const menuPageContainer = document.querySelector(".menu-page-container")
+const navBar = document.querySelector(".nav-div")
 
 shoppingCartBtn.addEventListener('click', display);
 
 function display() {
   shoppingCart.style.display = "block";
-  menuPageContainer.style.display = "none";
+  
 }
 
 
@@ -148,11 +149,11 @@ function removeButton() {
   const removeCartItem = document.querySelectorAll(".remove-cart-item");
 
 removeCartItem.forEach(removeBtn => {
-    removeBtn.addEventListener('click', remove);
+    removeBtn.addEventListener('click', removeCard);
   });
 }
 
-function remove(event) {
+function removeCard(event) {
   console.log("clicked");
   cartNumber.textContent--;
 
