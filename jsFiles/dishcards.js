@@ -141,7 +141,7 @@ function searchElements () {
 
 
 
-
+// VARUKORG
 const shoppingCartBtn = document.querySelector(".shopping-cart-logo")
 const menuPageContainer = document.querySelector(".menu-page-container")
 
@@ -160,17 +160,15 @@ const cards = document.querySelectorAll(".dish-card");
 const shoppingCart = document.querySelector(".shopping-cart");
 const cartNumber = document.querySelector(".cart-number");
 
+// Adding item to cart
 cards.forEach(card => {
   card.addEventListener('click', putInOrder);
 })
 
-
 function putInOrder(event) {
 let orderArray = [];
 
-
 cartNumber.textContent++;
-
 
 let cartItem = document.createElement('div');
 let cartItemImg = document.createElement('img');
@@ -199,9 +197,13 @@ shoppingCart.append(cartItem);
 
 
 
-
-/* const removeItemBtn = document.querySelector(".remove-cart-item");
+// Remove cart item
+const removeItemBtn = document.querySelector(".remove-cart-item");
 
 removeItemBtn.addEventListener('click', removeItem);
 
-function removeItem() {} */
+function removeItem() {
+  
+}
+
+// VARUKORG
