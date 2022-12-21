@@ -101,6 +101,8 @@ body {
     bottom: 0;
     margin-bottom: 1.8em;
     background-color: rgb(255, 255, 255);
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
 }
 .nav-main-links{
     color: rgb(0, 0, 0);
