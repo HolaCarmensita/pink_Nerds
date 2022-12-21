@@ -1,7 +1,7 @@
-let saldoValue = document.querySelector('.saldo-value')
+const btnSaldo = document.querySelector('.btn-saldo').addEventListener('click', getInputValue)
 
-let btnSaldo = document.querySelector('.btn-saldo').addEventListener('click' ,function(){
-    console.log('Hello World')
-})
+function getInputValue(){
+    const inputVal = document.getElementById('myInput').value = btnSaldo;
 
-//Make the btnSaldo appear in saldoValue. 
+}
+// console.log(getInputValue)
