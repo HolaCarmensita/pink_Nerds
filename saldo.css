@@ -7,7 +7,7 @@
 .container-saldo{
 
 }
-h1{
+h1 {
     /* display: inline; */
     margin: 0 auto;
     display: flex;
@@ -20,11 +20,9 @@ h1{
     padding: 20px;
     width: 40%;
     padding: 2em 0;
-    
     margin: 0 auto;
     justify-content: center;
     overflow: hidden;
-    
 }
 .cart-saldo{
     display: flex;
@@ -37,7 +35,7 @@ h1{
     gap: 1em;
 
 }
-.select-class{
+/* .select-class{
     width: 50%;
     margin: 0 auto;
     padding: 15px 14px;
@@ -58,4 +56,8 @@ option {
     margin: 0 auto;
     padding: 10px 0;
     border-radius: 4px;
+} */
+
+input {
+    color: #000;
 }
