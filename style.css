@@ -100,8 +100,8 @@ body {
 .active{
     color: rgb(255, 0, 0);
     /* background-color: aliceblue; */
-    padding: 3px;
-    border-radius: 5px;
+    /* padding: 3px;
+    border-radius: 5px; */
 }
 
 /* .nav-main-links:active{
