@@ -46,14 +46,5 @@ img {
     font-size: 1em;
 }
 
-.shopping-cart-container {
-    position: absolute;
 
-    right: 1.5em;
-    top: 1em;
-}
 
-.shopping-cart-logo {
-    width: 2.5em;
-    cursor: pointer;
-}

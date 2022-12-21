@@ -9,19 +9,36 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="cart.css" />
     <script src="jsFiles/app.js" defer></script>
     <script src="jsFiles/menulanguage.js" defer></script>
     <script src="jsFiles/db.js" defer></script>
     <script src="jsFiles/menu.js" defer></script>
     <script src="jsFiles/dishcards.js" defer></script>
+    <script src="jsFiles/shopping-cart.js" defer></script>
   </head>
+
   <body>
-    <div class="shopping-cart-container">
+    <div class="shopping-cart-logo-container">
       <img
         src="assets/shopping-cart.png"
         class="shopping-cart-logo"
         alt="shopping cart"
       />
+      <span class="cart-number">0</span>
+    </div>
+
+    <div class="shopping-cart">
+      <h2>Cart items</h2>
+      <div class="cart-item">
+        <img
+          src="https://goldbelly.imgix.net/uploads/showcase_media_asset/image/137148/Gramercy-Tavern-Burger-and-Kielbasa-Kit-6.4.21-72ppi-1x1-15.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1"
+          alt="Cheese hamburger"
+          class="cart-item-img"
+        />
+        <p class="cart-item-p">Cheese Hamburger</p>
+        <button class="remove-cart-item">Remove</button>
+      </div>
     </div>
 
     <div class="menu-page-container">
@@ -49,11 +66,15 @@
 
       <button class="order-button" id="orderButton">Min Beställning</button>
 
-      <nav class="nav-main">
-        <a id="startLink" href="index.html" class="nav-main-links">Start</a>
-        <a id="menuLink" href="menu.html" class="nav-main-links active">Meny</a>
-        <a id="saldoLink" href="saldo.html" class="nav-main-links">Saldo</a>
-      </nav>
+      <div class="nav-div">
+        <nav class="nav-main">
+          <a id="startLink" href="index.html" class="nav-main-links">Start</a>
+          <a id="menuLink" href="menu.html" class="nav-main-links active"
+            >Meny</a
+          >
+          <a id="saldoLink" href="saldo.html" class="nav-main-links">Saldo</a>
+        </nav>
+      </div>
     </div>
   </body>
 </html>

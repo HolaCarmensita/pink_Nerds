@@ -138,7 +138,27 @@ function searchElements () {
 };
 
 
+
+
+
+
+const shoppingCartBtn = document.querySelector(".shopping-cart-logo")
+const menuPageContainer = document.querySelector(".menu-page-container")
+
+shoppingCartBtn.addEventListener('click', display);
+
+function display() {
+  shoppingCart.style.display = "block";
+  menuPageContainer.style.display = "none";
+
+}
+
+
+
+
 const cards = document.querySelectorAll(".dish-card");
+const shoppingCart = document.querySelector(".shopping-cart");
+const cartNumber = document.querySelector(".cart-number");
 
 cards.forEach(card => {
   card.addEventListener('click', putInOrder);
@@ -148,9 +168,40 @@ cards.forEach(card => {
 function putInOrder(event) {
 let orderArray = [];
 
-let clickedCard = event.currentTarget.name;
 
 
-orderArray.push(clickedCard);
-console.log(orderArray);
+let cartItem = document.createElement('div');
+let cartItemImg = document.createElement('img');
+let cartItemP = document.createElement('p');
+let cartItemBtn = document.createElement('button');
+
+cartItem.classList.add("cart-item");
+cartItemImg.classList.add("cart-item-img")
+cartItemP.classList.add("cart-item-p")
+cartItemBtn.classList.add("remove-cart-item")
+
+cartItemImg.textContent = event.currentTarget;
+cartItemP.textContent = event.currentTarget.textContent;
+cartItemBtn.textContent = "Remove";
+
+
+cartItem.append(cartItemImg, cartItemP, cgitartItemBtn);
+shoppingCart.append(cartItem);
+
+
+//let clickedCard = event.currentTarget.name;
+//orderArray.push(clickedCard);
+//console.log(orderArray);
+}
+
+
+
+
+
+const removeItemBtn = document.querySelector(".remove-cart-item");
+
+removeItemBtn.addEventListener('click', removeItem);
+
+function removeItem() {
+
 }
