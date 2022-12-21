@@ -77,7 +77,78 @@ function searchElements () {
 //     choosenDishes.push(e.target);
 // }
 
-
 //SPREAD OPERATIOR 
 //const flatDbList = [...db.bbqs, ...db.burgers,
 //    ...db.pizzas, ...db.porks, ...db.sandwiches,]
+
+
+
+
+
+
+
+// VARUKORG
+const shoppingCartBtn = document.querySelector(".shopping-cart-logo")
+const menuPageContainer = document.querySelector(".menu-page-container")
+
+shoppingCartBtn.addEventListener('click', display);
+
+function display() {
+  shoppingCart.style.display = "block";
+  menuPageContainer.style.display = "none";
+}
+
+
+
+
+const cards = document.querySelectorAll(".dish-card");
+const shoppingCart = document.querySelector(".shopping-cart");
+const cartNumber = document.querySelector(".cart-number");
+
+// Adding item to cart
+cards.forEach(card => {
+  card.addEventListener('click', putInOrder);
+})
+
+function putInOrder(event) {
+let orderArray = [];
+
+cartNumber.textContent++;
+
+let cartItem = document.createElement('div');
+let cartItemImg = document.createElement('img');
+let cartItemP = document.createElement('p');
+let cartItemBtn = document.createElement('button');
+
+cartItem.classList.add("cart-item");
+cartItemImg.classList.add("cart-item-img")
+cartItemP.classList.add("cart-item-p")
+cartItemBtn.classList.add("remove-cart-item")
+
+cartItemImg.innerHTML = `<img src="${event.currentTarget}"`;
+cartItemP.textContent = event.currentTarget.textContent;
+cartItemBtn.textContent = "Remove";
+
+
+cartItem.append(cartItemImg, cartItemP, cartItemBtn);
+shoppingCart.append(cartItem);
+
+
+//let clickedCard = event.currentTarget.name;
+//orderArray.push(clickedCard);
+//console.log(orderArray);
+}
+
+
+
+
+// Remove cart item
+const removeItemBtn = document.querySelector(".remove-cart-item");
+
+removeItemBtn.addEventListener('click', removeItem);
+
+function removeItem() {
+  
+}
+// VARUKORG
+
