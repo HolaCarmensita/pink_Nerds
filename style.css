@@ -74,9 +74,9 @@ body {
     justify-content: center;
     flex-direction: column;
 
-
-    width: 250px;
-    height: 250px;
+    margin-top: 3em;
+    width: 220px;
+    height: 220px;
 }
 
 .featureCard-body p {
@@ -84,7 +84,7 @@ body {
 }
 
 .featureCardImage {
-    width: 200px;
+    width: 220px;
     border-radius: 50%;
     cursor: pointer;
     border: 1px solid black;
@@ -161,11 +161,12 @@ body {
 img {
     width: 100px;
 }
+
 .menu-container {
-        margin: auto;
-        width: 80%;
-        /*border: 3px solid black;*/
-        padding: 10px;
+    margin: auto;
+    width: 80%;
+    /*border: 3px solid black;*/
+    padding: 10px;
 }
 
 .dish-container {
@@ -199,6 +200,4 @@ img {
 .hidden {
     display: none;
  }
-
 /* STYLE FÖR SEARCH OCH CARDS mvh Casandra ^*/
-
