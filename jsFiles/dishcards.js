@@ -94,7 +94,7 @@ const menuList = [
 
 ]
 
-const cards = document.querySelectorAll(".dish-card");
+
 const cardBoard = document.querySelector('.menu-container');
 const searchInput = document.querySelector('.search');
 const dishContainer = document.querySelector(".dish-container");
@@ -118,7 +118,7 @@ menuList.forEach((listObject, index ) => { // For each item in the list + using 
     dishCard.querySelector(".dish-price").innerText = menuList[index].price; //price from listObject to template
     dishContainer.appendChild(dishCard);
 
-    dishCard.addEventListener('click', putInOrder);
+    
 });
 
 
@@ -138,6 +138,12 @@ function searchElements () {
 };
 
 
+const cards = document.querySelectorAll(".dish-card");
+
+cards.forEach(card => {
+  card.addEventListener('click', putInOrder);
+})
+
 
 function putInOrder(event) {
 let orderArray = [];
@@ -147,6 +153,4 @@ let clickedCard = event.target.textContent;
 
 orderArray.push(clickedCard);
 console.log(orderArray);
-
-
 }
