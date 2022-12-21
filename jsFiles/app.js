@@ -27,7 +27,7 @@ function cardFeatureGenerator(db) {
 }
 
 
-//cardFeatureGenerator(db);
+cardFeatureGenerator(db);
 
 //console.log(db.bbqs[0].name);
 

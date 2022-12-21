@@ -37,12 +37,11 @@ menuList.forEach((listObject, index ) => { // For each item in the list + using 
     const dishCard = template.content.cloneNode(true) //cloning the template into a varible
     dishCard.querySelector(".dish-card").setAttribute("id", menuList[index].name);
     dishCard.querySelector(".dish-name").innerText = menuList[index].name; //name from listObject to template
-    const dishImg = dishCard.querySelector(".dish-img").setAttribute("src", menuList[index].img); //img from listObject to template
+    dishCard.querySelector(".dish-img").setAttribute("src", menuList[index].img); //img from listObject to template
     dishCard.querySelector(".dish-dsc").innerText = menuList[index].dsc; //dsc from listObject to template
     dishCard.querySelector(".dish-price").innerText = menuList[index].price; //price from listObject to template
     dishContainer.appendChild(dishCard);
 
-    
 });
 
 //SEARCHFUNCTION THAT SEARCH FOR THE NAME OCH THE DISH AND THE dsc.
@@ -101,9 +100,11 @@ function display() {
 
 
 
+
 const cards = document.querySelectorAll(".dish-card");
 const shoppingCart = document.querySelector(".shopping-cart");
 const cartNumber = document.querySelector(".cart-number");
+
 
 // Adding item to cart
 cards.forEach(card => {
@@ -112,7 +113,7 @@ cards.forEach(card => {
 
 function putInOrder(event) {
 let orderArray = [];
-
+console.log("the product is clicked ");
 cartNumber.textContent++;
 
 let cartItem = document.createElement('div');
@@ -125,7 +126,7 @@ cartItemImg.classList.add("cart-item-img")
 cartItemP.classList.add("cart-item-p")
 cartItemBtn.classList.add("remove-cart-item")
 
-cartItemImg.innerHTML = `<img src="${event.currentTarget}"`;
+cartItemImg.setAttribute("src", event.currentTarget.img);
 cartItemP.textContent = event.currentTarget.textContent;
 cartItemBtn.textContent = "Remove";
 
@@ -133,7 +134,7 @@ cartItemBtn.textContent = "Remove";
 cartItem.append(cartItemImg, cartItemP, cartItemBtn);
 shoppingCart.append(cartItem);
 
-
+removeButton();
 //let clickedCard = event.currentTarget.name;
 //orderArray.push(clickedCard);
 //console.log(orderArray);
@@ -143,12 +144,21 @@ shoppingCart.append(cartItem);
 
 
 // Remove cart item
-const removeItemBtn = document.querySelector(".remove-cart-item");
+function removeButton() {
+  const removeCartItem = document.querySelectorAll(".remove-cart-item");
 
-removeItemBtn.addEventListener('click', removeItem);
-
-function removeItem() {
-  
+removeCartItem.forEach(removeBtn => {
+    removeBtn.addEventListener('click', remove);
+  });
 }
-// VARUKORG
 
+function remove(event) {
+  console.log("clicked");
+  cartNumber.textContent--;
+
+  let buttonclicked = event.target;
+  buttonclicked.parentElement.remove();
+}
+
+
+// VARUKORG
