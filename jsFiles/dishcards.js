@@ -84,7 +84,16 @@ function searchElements () {
 //const flatDbList = [...db.bbqs, ...db.burgers,
 //    ...db.pizzas, ...db.porks, ...db.sandwiches,]
 
+function createCardByIndex(index) {
+  const dishCard = template.content.cloneNode(true) //cloning the template into a varible
+  dishCard.querySelector(".dish-card").setAttribute("id", menuList[index].name);
+  dishCard.querySelector(".dish-name").innerText = menuList[index].name; //name from listObject to template
+  dishCard.querySelector(".dish-img").setAttribute("src", menuList[index].img); //img from listObject to template
+  dishCard.querySelector(".dish-dsc").innerText = menuList[index].dsc; //dsc from listObject to template
+  dishCard.querySelector(".dish-price").innerText = menuList[index].price; //price from listObject to template
 
+  return dishCard;
+}
 
 
 
@@ -127,18 +136,6 @@ function putInOrder(index) {
   dishCard.appendChild
 
   removeButton();
-}
-
-
-function createCardByIndex(index) {
-  const dishCard = template.content.cloneNode(true) //cloning the template into a varible
-  dishCard.querySelector(".dish-card").setAttribute("id", menuList[index].name);
-  dishCard.querySelector(".dish-name").innerText = menuList[index].name; //name from listObject to template
-  dishCard.querySelector(".dish-img").setAttribute("src", menuList[index].img); //img from listObject to template
-  dishCard.querySelector(".dish-dsc").innerText = menuList[index].dsc; //dsc from listObject to template
-  dishCard.querySelector(".dish-price").innerText = menuList[index].price; //price from listObject to template
-
-  return dishCard;
 }
 
 
