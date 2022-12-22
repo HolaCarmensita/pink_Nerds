@@ -135,7 +135,9 @@ closeCartBtnContainer.addEventListener('click', () => {
 function orderBtnRemove() {
   orderBtn.addEventListener('click', () => {
 
-    alert("Tack för beställningen. Din mat kommer snart!")
+    if (window.location.hash == "#eng") {
+      alert("Thanks for your order! Your food will be out shortly!")
+    } else alert("Tack för beställningen! Din mat kommer snart!")
     
     shoppingCart.style.display = "none";
     cartTitleContainer.style.display = "none";

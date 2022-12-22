@@ -19,20 +19,6 @@ function changeLanguage(lang) {
     saldoLink.textContent = "Balance";
   }
 
-// let balance = document.querySelector('h2');
-// let input = document.querySelector('input');
-// let button = document.querySelector('button');
-// let span = document.getElementById('zeroBalance')
-
-//   button.addEventListener('click', () => {
-//     let myBalance = Number(input.value);
-//     input.value = '';
-
-//     let currentBalance = Number(span.textContent.replace(':-', ''))
-//     currentBalance = currentBalance + myBalance;
-//     span.textContent = currentBalance + (':-');
-//     });
-
 let balance = document.querySelector('h2');
 let input = document.querySelector('input');
 let button = document.querySelector('button');
