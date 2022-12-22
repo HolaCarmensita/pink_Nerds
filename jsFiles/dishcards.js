@@ -16,11 +16,12 @@ let dishPrice = cloneTemplate.querySelector(".dish-price")*/
 function makeMenuList () {
     const flatDbList = [...db.bbqs, ...db.burgers,
         ...db.pizzas, ...db.porks, ...db.sandwiches,]
-    const specificMenu = [flatDbList[0].id, flatDbList[1].id, flatDbList[2].id];
+    const specificMenu = [flatDbList[0].id, flatDbList[201].id, flatDbList[264].id, flatDbList[231].id,
+    flatDbList[96].id, flatDbList[121].id, flatDbList[125].id,flatDbList[131].id, flatDbList[136].id, flatDbList[13].id];
 
     for (let i = 0; i < flatDbList.length; i++) {
         if (specificMenu.includes(flatDbList[i].id)) {
-            menuList.push(flatDbList[i])
+            menuList.push(flatDbList[i]);
         }    
     }
     // FOR EACH LÖSNING ISTÄLLET FÖR FOR I? 
@@ -30,19 +31,22 @@ function makeMenuList () {
     //     }    
     // })
 }
+
 makeMenuList ();
 
 //CREATE DISHCARDS BASED ON THE NEW LIST. 
 menuList.forEach((listObject, index ) => { // For each item in the list + using the index of those items
-    const dishCard = template.content.cloneNode(true) //cloning the template into a varible
-    dishCard.querySelector(".dish-card").setAttribute("id", menuList[index].name);
-    dishCard.querySelector(".dish-name").innerText = menuList[index].name; //name from listObject to template
-    dishCard.querySelector(".dish-img").setAttribute("src", menuList[index].img); //img from listObject to template
-    dishCard.querySelector(".dish-dsc").innerText = menuList[index].dsc; //dsc from listObject to template
-    dishCard.querySelector(".dish-price").innerText = menuList[index].price; //price from listObject to template
+    const dishCard = createCardByIndex(index);
+    
+    dishCard.querySelector(".dish-card").addEventListener('click', () => {
+      putInOrder(index);
+    });
+
     dishContainer.appendChild(dishCard);
 
+    
 });
+
 
 //SEARCHFUNCTION THAT SEARCH FOR THE NAME OCH THE DISH AND THE dsc.
 function searchElements () {
@@ -80,13 +84,20 @@ function searchElements () {
 //const flatDbList = [...db.bbqs, ...db.burgers,
 //    ...db.pizzas, ...db.porks, ...db.sandwiches,]
 
+function createCardByIndex(index) {
+  const dishCard = template.content.cloneNode(true) //cloning the template into a varible
+  dishCard.querySelector(".dish-card").setAttribute("id", menuList[index].name);
+  dishCard.querySelector(".dish-name").innerText = menuList[index].name; //name from listObject to template
+  dishCard.querySelector(".dish-img").setAttribute("src", menuList[index].img); //img from listObject to template
+  dishCard.querySelector(".dish-dsc").innerText = menuList[index].dsc; //dsc from listObject to template
+  dishCard.querySelector(".dish-price").innerText = menuList[index].price; //price from listObject to template
+
+  return dishCard;
+}
 
 
 
-
-
-
-// VARUKORG
+// DENNIS VARUKORG
 const shoppingCartBtn = document.querySelector(".shopping-cart-logo")
 const menuPageContainer = document.querySelector(".menu-page-container")
 const navBar = document.querySelector(".nav-div")
@@ -99,67 +110,31 @@ function display() {
 }
 
 
-
-
-
 const cards = document.querySelectorAll(".dish-card");
 const shoppingCart = document.querySelector(".shopping-cart");
 const cartNumber = document.querySelector(".cart-number");
 
 
 // Adding item to cart
-cards.forEach(card => {
-  card.addEventListener('click', putInOrder);
-})
+function putInOrder(index) {
+  console.log("the product is clicked ", index);
+  cartNumber.textContent++;
 
-function putInOrder(event) {
-let orderArray = [];
-console.log("the product is clicked ");
-cartNumber.textContent++;
+  // REMOVING CART ITEMS
+  const removeBtn = document.createElement("button");
+  removeBtn.innerText = "remove";
+  
+  const dishCard = createCardByIndex(index);
+  dishCard.querySelector(".dish-card").appendChild(removeBtn);
 
-let cartItem = document.createElement('div');
-let cartItemImg = document.createElement('img');
-let cartItemP = document.createElement('p');
-let cartItemBtn = document.createElement('button');
+  removeBtn.addEventListener('click', () => {
+    removeBtn.parentElement.remove();
 
-cartItem.classList.add("cart-item");
-cartItemImg.classList.add("cart-item-img")
-cartItemP.classList.add("cart-item-p")
-cartItemBtn.classList.add("remove-cart-item")
-
-cartItemImg.setAttribute("src", event.currentTarget.img);
-cartItemP.textContent = event.currentTarget.textContent;
-cartItemBtn.textContent = "Remove";
-
-
-cartItem.append(cartItemImg, cartItemP, cartItemBtn);
-shoppingCart.append(cartItem);
-
-removeButton();
-//let clickedCard = event.currentTarget.name;
-//orderArray.push(clickedCard);
-//console.log(orderArray);
-}
-
-
-
-
-// Remove cart item
-function removeButton() {
-  const removeCartItem = document.querySelectorAll(".remove-cart-item");
-
-removeCartItem.forEach(removeBtn => {
-    removeBtn.addEventListener('click', removeCard);
+    cartNumber.textContent--;
   });
+
+  shoppingCart.appendChild(dishCard);
+  dishCard.appendChild
+
 }
-
-function removeCard(event) {
-  console.log("clicked");
-  cartNumber.textContent--;
-
-  let buttonclicked = event.target;
-  buttonclicked.parentElement.remove();
-}
-
-
-// VARUKORG
+// DENNIS VARUKORG
