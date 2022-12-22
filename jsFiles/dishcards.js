@@ -120,6 +120,7 @@ function putInOrder(index) {
   console.log("the product is clicked ", index);
   cartNumber.textContent++;
 
+  // REMOVING CART ITEMS
   const removeBtn = document.createElement("button");
   removeBtn.innerText = "remove";
   
@@ -135,24 +136,5 @@ function putInOrder(index) {
   shoppingCart.appendChild(dishCard);
   dishCard.appendChild
 
-  removeButton();
-}
-
-
-// REMOVING CART ITEMS
-function removeButton() {
-  const removeCartItem = document.querySelectorAll(".remove-cart-item");
-
-  removeCartItem.forEach(removeBtn => {
-    removeBtn.addEventListener('click', removeCard);
-  });
-}
-
-
-function removeCard(event) {
-  console.log("clicked");
-
-  let buttonclicked = event.target;
-  buttonclicked.parentElement.remove();
 }
 // DENNIS VARUKORG
