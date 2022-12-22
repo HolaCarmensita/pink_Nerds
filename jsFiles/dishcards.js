@@ -98,21 +98,62 @@ function createCardByIndex(index) {
 
 
 // DENNIS VARUKORG
-const shoppingCartBtn = document.querySelector(".shopping-cart-logo")
-const menuPageContainer = document.querySelector(".menu-page-container")
-const navBar = document.querySelector(".nav-div")
-
-shoppingCartBtn.addEventListener('click', display);
-
-function display() {
-  shoppingCart.style.display = "block";
-  
-}
-
-
+const menuPageContainer = document.querySelector(".menu-page-container");
+const navBar = document.querySelector(".nav-div");
+const shoppingCartBtn = document.querySelector(".shopping-cart-logo");
+const closeCartBtn = document.querySelector("close-cart-logo");
+const closeCartBtnContainer = document.querySelector(".close-cart-logo-container");
+const orderBtnContainer = document.querySelector(".order-btn-container");
+const orderBtn = document.querySelector(".order-btn");
 const cards = document.querySelectorAll(".dish-card");
 const shoppingCart = document.querySelector(".shopping-cart");
 const cartNumber = document.querySelector(".cart-number");
+const cartTitleContainer = document.querySelector(".cart-title-container");
+
+
+//HIDING THE MENU AND SHOWING THE CART
+shoppingCartBtn.addEventListener('click', () => {
+  menuPageContainer.style.display = "none";
+  shoppingCart.style.display = "block";
+  orderBtnContainer.style.display = "block";
+  cartTitleContainer.style.display = "block";
+
+  closeCartBtnContainer.innerHTML = `<img src="assets/close.png" class="close-cart-logo" alt="X" />`
+});
+
+//HIDING THE CART AND SHOWING THE MENU
+closeCartBtnContainer.addEventListener('click', () => {
+  menuPageContainer.style.display = "block";
+  shoppingCart.style.display = "none";
+  orderBtnContainer.style.display = "none";
+  cartTitleContainer.style.display = "none";
+
+  closeCartBtnContainer.innerHTML = "";
+});
+
+//GOING BACK TO MENU AND REMOVE ITEMS FROM CART WHEN "Order products" IS PRESSED
+function orderBtnRemove() {
+  orderBtn.addEventListener('click', () => {
+
+    alert("Tack för beställningen. Din mat kommer snart!")
+    
+    shoppingCart.style.display = "none";
+    cartTitleContainer.style.display = "none";
+    menuPageContainer.style.display = "block";
+    
+    closeCartBtnContainer.innerHTML = "";
+    cartNumber.textContent = "";
+      
+    //Looping through all children and deleting them
+    while (shoppingCart.firstChild) {
+      shoppingCart.removeChild(shoppingCart.firstChild);
+    }
+  });
+}
+
+console.log(shoppingCart);
+orderBtnRemove(shoppingCart)
+
 
 
 // Adding item to cart
@@ -120,11 +161,12 @@ function putInOrder(index) {
   console.log("the product is clicked ", index);
   cartNumber.textContent++;
 
+  const dishCard = createCardByIndex(index);
+
   // REMOVING CART ITEMS
   const removeBtn = document.createElement("button");
   removeBtn.innerText = "remove";
   
-  const dishCard = createCardByIndex(index);
   dishCard.querySelector(".dish-card").appendChild(removeBtn);
 
   removeBtn.addEventListener('click', () => {
