@@ -5,6 +5,8 @@
         location.reload();
       }
 
+      let url = document.URL
+
         // Sätt sidans innehåll baserat på hash-värdet
         if (window.location.hash == "#eng") {
             welcomePhrase.textContent = "Welcome to The Kraken Inn";

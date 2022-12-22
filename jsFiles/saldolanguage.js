@@ -1,11 +1,11 @@
-    // Funktion för att ändra hash-värdet på sidan
+// Funktion för att ändra hash-värdet på sidan
     
 function changeLanguage(lang) {
     location.hash = lang;
     location.reload();
   }
 
-    // Sätt sidans innehåll baserat på hash-värdet
+// Sätt sidans innehåll baserat på hash-värdet
   if (window.location.hash == "#eng") {
     myBalance.textContent = "My balance";
     yourBalance.textContent = "Available amount:";
