@@ -118,7 +118,7 @@ shoppingCartBtn.addEventListener('click', () => {
   orderBtnContainer.style.display = "block";
   cartTitleContainer.style.display = "block";
 
-  closeCartBtnContainer.innerHTML = `<img src="assets/close.png" class="close-cart-logo" alt="X" />`
+  closeCartBtnContainer.innerHTML = `<img src="assets/close_FILL0_wght400_GRAD0_opsz48.png" class="close-cart-logo" alt="X" />`
 });
 
 //HIDING THE CART AND SHOWING THE MENU
