@@ -93,6 +93,9 @@ body {
     margin: 1.8em 0em 1em 0em;
 }
 
+.nav-div {
+}
+
 .nav-main{
     display: flex;
     justify-content: space-evenly;
@@ -101,9 +104,13 @@ body {
     bottom: 0;
     margin-bottom: 1.8em;
     background-color: rgb(255, 255, 255);
+
     border-top: 3px solid black;
     border-bottom: 3px solid black;
+    z-index: 4;
+
 }
+
 .nav-main-links{
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -113,6 +120,7 @@ body {
     font-family: 'Source Serif Pro';
     font-weight: 400;
 }
+
 .active{
     color: rgb(255, 0, 0);
 }
@@ -121,6 +129,7 @@ body {
     border-bottom: 3px solid rgb(59, 59, 255);;
     color: rgb(59, 59, 255);
 } */
+
 
 .front-page-featured {
     display: flex;
