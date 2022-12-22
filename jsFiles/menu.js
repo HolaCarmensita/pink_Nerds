@@ -17,5 +17,4 @@ const menuContainer = document.querySelector(".menu-container");
             saldoLink.textContent = "Balance";
             treasureChest.textContent = "Treasure Chest"
             orderBtn.textContent = "Send order"
-            orderBtn.alert.textContent = "sdfsdf"
         }
