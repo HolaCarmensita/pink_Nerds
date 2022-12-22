@@ -22,14 +22,13 @@ function changeLanguage(lang) {
 let balance = document.querySelector('h2');
 let input = document.querySelector('input');
 let button = document.querySelector('button');
+let span = document.getElementById('zeroBalance')
 
   button.addEventListener('click', () => {
-    let myBalance = input.value + ":-";
+    let myBalance = Number(input.value);
     input.value = '';
 
-    let newBalance = document.createElement('p');
-    newBalance.className = 'balance';
-
-    balance.appendChild(newBalance);
-    newBalance.textContent = myBalance;
+    let currentBalance = Number(span.textContent.replace(':-', ''))
+    currentBalance = currentBalance + myBalance;
+    span.textContent = currentBalance + (':-');
     });

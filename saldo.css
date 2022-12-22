@@ -24,7 +24,7 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
-.balance {
+#balance {
     color: white;
 }
 .cart-saldo{
@@ -55,6 +55,10 @@ input {
 
 ::placeholder {
     text-align: center; 
+ }
+
+ #zeroBalance {
+    color: white;
  }
 
 .bank-id {
