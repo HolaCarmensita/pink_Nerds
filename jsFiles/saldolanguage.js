@@ -1,11 +1,11 @@
-    // Funktion för att ändra hash-värdet på sidan
+// Funktion för att ändra hash-värdet på sidan
     
 function changeLanguage(lang) {
     location.hash = lang;
     location.reload();
   }
 
-    // Sätt sidans innehåll baserat på hash-värdet
+// Sätt sidans innehåll baserat på hash-värdet
   if (window.location.hash == "#eng") {
     myBalance.textContent = "My balance";
     yourBalance.textContent = "Available amount:";
@@ -19,17 +19,35 @@ function changeLanguage(lang) {
     saldoLink.textContent = "Balance";
   }
 
+// let balance = document.querySelector('h2');
+// let input = document.querySelector('input');
+// let button = document.querySelector('button');
+// let span = document.getElementById('zeroBalance')
+
+//   button.addEventListener('click', () => {
+//     let myBalance = Number(input.value);
+//     input.value = '';
+
+//     let currentBalance = Number(span.textContent.replace(':-', ''))
+//     currentBalance = currentBalance + myBalance;
+//     span.textContent = currentBalance + (':-');
+//     });
+
 let balance = document.querySelector('h2');
 let input = document.querySelector('input');
 let button = document.querySelector('button');
+let span = document.getElementById('zeroBalance')
 
   button.addEventListener('click', () => {
-    let myBalance = input.value + ":-";
+    let myBalance = Number(input.value);
     input.value = '';
 
-    let newBalance = document.createElement('p');
-    newBalance.className = 'balance';
-
-    balance.appendChild(newBalance);
-    newBalance.textContent = myBalance;
+    let currentBalance = Number(span.textContent.replace(':-', ''))
+    currentBalance = add(currentBalance, myBalance);
+    span.textContent = currentBalance + (':-');
     });
+
+
+function add (num1, num2) {
+  return num1 + num2;
+}

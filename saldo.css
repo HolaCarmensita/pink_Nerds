@@ -13,7 +13,9 @@ h1 {
 }
 .box-saldo{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 60%;
     padding: 2em 0;
     margin: 0 auto;
@@ -24,7 +26,7 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
-.balance {
+#balance {
     color: white;
 }
 .cart-saldo{
@@ -40,6 +42,7 @@ h1 {
 .choose-amount {
     color: white;
     font-size: larger;
+    text-align: center;
 }
 
 .chosen-amount {
@@ -55,7 +58,16 @@ input {
 
 ::placeholder {
     text-align: center; 
- }
+}
+
+ #zeroBalance {
+    color: white;
+    margin-top: 40px;
+}
+
+span {
+    font-size: xx-large;
+}
 
 .bank-id {
     height: 40px;
