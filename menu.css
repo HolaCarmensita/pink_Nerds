@@ -32,7 +32,7 @@ img {
 
 /* vi vill ändra enehet via javascript https://medium.com/@speir.wang/how-to-change-pseudo-element-properties-with-javascript-eb37b9fd3157*/
 .dish-price::after {
-    content: "kr";
+    content: ":-";
 }
 
 /*Tillhör sökfunktionen*/
