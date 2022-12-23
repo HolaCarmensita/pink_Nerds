@@ -14,8 +14,8 @@ button {
 
 body {
     position: relative;
-    /* background: rgba(0,0,0,0.5) url(assets/HDbackgroundMap.jpg) fixed center center/ cover; */
-    background-color: grey; /*vi lyckades inte ändra bakgrunden för bara saldo? Så kommenterade ut sålänge?*/
+    background: rgba(0,0,0,0.5) url(../assets/HDbackgroundMap.jpg) fixed center center/ cover;
+    /*background-color: grey; /*vi lyckades inte ändra bakgrunden för bara saldo? Så kommenterade ut sålänge?*/
     background-blend-mode: darken;
     width: 100%;
 }
