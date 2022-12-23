@@ -14,7 +14,7 @@ button {
 
 body {
     position: relative;
-    background: rgba(0,0,0,0.5) url(assets/HDbackgroundMap.jpg) fixed center center/ cover;
+    background: rgba(0,0,0,0.5) url(../assets/HDbackgroundMap.jpg) fixed center center/ cover;
     background-blend-mode: darken;
     width: 100%;
 }
