@@ -1,3 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.3em;
+    letter-spacing: 0.03em;
+    color: black;
+}
+
 .shopping-cart-logo-container {
     position: absolute;
 
@@ -26,6 +35,7 @@
 .cart-title {
     text-align: center;
     padding: 1em;
+
 }
 
 .cart-item {

@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Roboto', sans-serif; 
     line-height: 1.3em;
     letter-spacing: 0.03em;
 
@@ -14,7 +14,8 @@ button {
 
 body {
     position: relative;
-    background: rgba(0,0,0,0.5) url(../assets/HDbackgroundMap.jpg) fixed center center/ cover;
+    /* background: rgba(0,0,0,0.5) url(assets/HDbackgroundMap.jpg) fixed center center/ cover; */
+    background-color: grey; /*vi lyckades inte ändra bakgrunden för bara saldo? Så kommenterade ut sålänge?*/
     background-blend-mode: darken;
     width: 100%;
 }
@@ -40,18 +41,15 @@ body {
 }
 
 .flags {
-    width: 75px;
-    height: 75px;
-
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    border: 1px solid black;
     box-shadow: 2px 2px 10px black;
-
     cursor: pointer;
 }
 
 .front-page-header {
-    font-size: 2.6em;
+    font-size: 2em;
 }
 
 .front-page-logo p {
@@ -87,48 +85,36 @@ body {
     width: 220px;
     border-radius: 50%;
     cursor: pointer;
-    border: 1px solid black;
     box-shadow: 2px 2px 10px black;
 
     margin: 1.8em 0em 1em 0em;
 }
 
-.nav-div {
-}
 
 .nav-main{
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    align-items: center;
     position: fixed;
+    width: 100%;
     bottom: 0;
-    margin-bottom: 1.8em;
     background-color: rgb(255, 255, 255);
-
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-    z-index: 4;
-
+    height: 8%;
+    box-shadow: 2px 2px 10px black;
 }
 
 .nav-main-links{
     color: rgb(0, 0, 0);
     text-decoration: none;
     list-style: none;
-    font-size: 23px;
-    font-style: bold;
-    font-family: 'Source Serif Pro';
+    font-size: 20px;
     font-weight: 400;
 }
 
 .active{
-    color: rgb(255, 0, 0);
+    text-decoration: underline;
 }
 
-/* .nav-main-links:active{
-    border-bottom: 3px solid rgb(59, 59, 255);;
-    color: rgb(59, 59, 255);
-} */
 
 
 .front-page-featured {
@@ -137,35 +123,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-/*
-.card-body {
-    width: 100px;
-    height: 100px;
-    padding: 5em;
-    margin: 0.3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    flex-direction: column;
-}
-.card-body {
-    background-image: linear-gradient(to bottom, #717681, #5f5a64, #4b4045, #342929, #1c1510);
-    background:rgba(106, 93, 93, 0.4);
-}
-    
-
-.card-body p {
-    color: black;
-    font-size: 1.2em;
-    font-weight: 700;
-}
-
-.cardImage{
-    width: 100px;
-    height: 100px;
-}
-*/
 
 /* STYLE FÖR SEARCH OCH CARDS mvh Casandra*/
 
@@ -189,7 +147,7 @@ img {
 }
 
 .dish-card {
-    border: 1px solid black;
+    border-radius: 5px;
     background-color: white;
     padding: .5rem;
 }
