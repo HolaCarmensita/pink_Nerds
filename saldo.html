@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Kraken Inn - Saldo</title>
+  
+    <link rel="stylesheet" href="cssFiles/saldo.css">
+    <link rel="stylesheet" href="cssFiles/style.css" />
+  
+    <!-- <script src="jsFiles/app.js" defer></script> -->
+    <script src="jsFiles/saldo.js" defer></script>
+</head>
+<body>
+    <div class="container-saldo">
+        <h1 id="myBalance">Mitt saldo</h1>
+
+        <div class="parent-box">
+            <div class="box-saldo">
+                <h2 id="yourBalance" class="your-balance">Tillgängligt belopp: </h2>
+                <span id="zeroBalance">0:-</span>
+            </div>
+            
+            <div class="cart-saldo">
+                <label id="chooseAmount" class="choose-amount" for="item">Välj belopp att lägga till i saldo</label>
+                <input type="number" name="item" id="chosenAmount" class="chosen-amount" placeholder="Önskat belopp">
+                <button id="bankID" class="bank-id">Godkänn med Bank-ID</button>
+            </div>
+    </div>
+
+    <nav class="nav-main">
+        <a id="startLink" href="index.html" class="nav-main-links">Start</a>
+        <a id="menuLink" href="menu.html" class="nav-main-links">Meny</a>
+        <a id="saldoLink" href="saldo.html" class="nav-main-links active">Saldo</a>
+      </nav>
+
+</body>
+</html>

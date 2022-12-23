@@ -1,0 +1,70 @@
+
+
+.order-btn,
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+body {
+    position: relative;
+}
+img {
+    width: 100px;
+}
+.menu-container {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.dish-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+}
+
+.dish-card {
+    background-color: white;
+    padding: .5rem;
+}
+
+.dish-card > .dish-name {
+    margin-bottom: .25rem; 
+}
+
+.dish-card > .dish-dsc {
+    font-size: .8rem;
+
+}
+
+/* vi vill ändra enehet via javascript https://medium.com/@speir.wang/how-to-change-pseudo-element-properties-with-javascript-eb37b9fd3157*/
+.dish-price::after {
+    content: "kr";
+    line-height: 2em;
+
+}
+
+/*Tillhör sökfunktionen*/
+.hidden {
+    display: none;
+}
+
+#search {
+    border: 1px solid #ccc;
+    text-align: left;
+    color: black;
+    padding: 1em;
+    width: 50%;
+    border-radius: 3px;
+}
+
+
+
